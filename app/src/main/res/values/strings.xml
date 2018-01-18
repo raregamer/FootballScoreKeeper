@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Football Score Keeper</string>
+    <string name="touchdown_home_button">Touchdown</string>
+    <string name="extra_point_home_button">Extra point</string>
+    <string name="field_goal_home_button">field goal</string>
+    <string name="safety_home_button">safety</string>
+    <string name="away_logo">Away</string>
+    <string name="score_away">0</string>
+    <string name="touchdown_away_team">Touchdown</string>
+    <string name="extra_point_away_button">Extra point</string>
+    <string name="field_goal_away_button">field goal</string>
+    <string name="safety_away_button">safety</string>
+    <string name="quarter_button">Quarter</string>
+    <string name="new_game_button">New Game</string>
+    <string name="quarter_logo">Quarter</string>
+    <string name="quarter_number">1</string>
+    <string name="home_logo">Home</string>
+    <string name="home_score">0</string>
 </resources>

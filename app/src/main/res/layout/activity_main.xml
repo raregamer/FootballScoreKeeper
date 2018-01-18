@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/footballfield"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.samue.footballscorekeeper.MainActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/footballfield"
+    >
+
 
     <LinearLayout
         android:id="@+id/quarter_header"
@@ -22,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Quarter"
+            android:text="@string/quarter_logo"
             android:gravity="center_horizontal"
             android:textColor="#FFFFFF"
             android:fontFamily="@font/scoreboard7"/>
@@ -32,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="1"
+            android:text="@string/quarter_number"
             android:textColor="#D80000"
             android:fontFamily="@font/scoreboard7"
             android:textSize="36dp"/>
@@ -65,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Home"
+                android:text="@string/home_logo"
                 android:textSize="50sp"
                 android:textColor="#FFFFFF"
                 android:fontFamily="@font/scoreboard7"/>
@@ -75,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="0"
+                android:text="@string/home_score"
                 android:textColor="#D80000"
                 android:textSize="50sp"
                 android:fontFamily="@font/scoreboard7"
@@ -92,28 +100,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="touchdown"
-                    android:text="Touchdown"
+                    android:text="@string/touchdown_home_button"
                     android:layout_marginBottom="16dp"/>
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="extraPoint"
-                    android:text="Extra point"
+                    android:text="@string/extra_point_home_button"
                     android:layout_marginBottom="16dp"/>
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="fieldGoal"
-                    android:text="field goal"
+                    android:text="@string/field_goal_home_button"
                     android:layout_marginBottom="16dp"/>
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="safety"
-                    android:text="safety"
+                    android:text="@string/safety_home_button"
                     android:layout_marginBottom="16dp"/>
 
             </LinearLayout>
@@ -141,7 +149,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Away"
+                android:text="@string/away_logo"
                 android:textSize="50sp"
                 android:textColor="#FFFFFF"
                 android:fontFamily="@font/scoreboard7"/>
@@ -151,7 +159,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="0"
+                android:text="@string/score_away"
                 android:textColor="#D80000"
                 android:textSize="50sp"
                 android:fontFamily="@font/scoreboard7"/>
@@ -166,28 +174,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="touchdownAway"
-                    android:text="Touchdown"
+                    android:text="@string/touchdown_away_team"
                     android:layout_marginBottom="16dp"/>
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="extraPointAway"
-                    android:text="Extra point"
+                    android:text="@string/extra_point_away_button"
                     android:layout_marginBottom="16dp"/>
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="fieldGoalAway"
-                    android:text="field goal"
+                    android:text="@string/field_goal_away_button"
                     android:layout_marginBottom="16dp"/>
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="safetyAway"
-                    android:text="safety"
+                    android:text="@string/safety_away_button"
                     android:layout_marginBottom="16dp"/>
             </LinearLayout>
         </LinearLayout>
@@ -204,15 +212,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="Quarter"
+            android:text="@string/quarter_button"
             android:onClick="quarter"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="New Game"
+            android:text="@string/new_game_button"
             android:onClick="newGame"/>
     </LinearLayout>
 
 </RelativeLayout>
+
+    </ScrollView>
