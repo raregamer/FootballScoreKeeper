@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/footballfield"
+    tools:context="com.example.samue.footballscorekeeper.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/quarter_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/team_score_layouts"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/quarterLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Quarter"
+            android:gravity="center_horizontal"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/scoreboard7"/>
+
+        <TextView
+            android:id="@+id/quarterNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="1"
+            android:textColor="#D80000"
+            android:fontFamily="@font/scoreboard7"
+            android:textSize="36dp"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/team_score_layouts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/game_commands"
+        android:orientation="horizontal">
+
+
+        <!-- Home Team Layout-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Home"
+                android:textSize="50sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/scoreboard7"/>
+
+            <TextView
+                android:id="@+id/home_team_score_board"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#D80000"
+                android:textSize="50sp"
+                android:fontFamily="@font/scoreboard7"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="touchdown"
+                    android:text="Touchdown"
+                    android:layout_marginBottom="16dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="extraPoint"
+                    android:text="Extra point"
+                    android:layout_marginBottom="16dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="fieldGoal"
+                    android:text="field goal"
+                    android:layout_marginBottom="16dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="safety"
+                    android:text="safety"
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="8dp">
+
+        </View>
+
+        <!-- Away Team -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Away"
+                android:textSize="50sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/scoreboard7"/>
+
+            <TextView
+                android:id="@+id/away_team_score_board"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#D80000"
+                android:textSize="50sp"
+                android:fontFamily="@font/scoreboard7"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="touchdownAway"
+                    android:text="Touchdown"
+                    android:layout_marginBottom="16dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="extraPointAway"
+                    android:text="Extra point"
+                    android:layout_marginBottom="16dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="fieldGoalAway"
+                    android:text="field goal"
+                    android:layout_marginBottom="16dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="safetyAway"
+                    android:text="safety"
+                    android:layout_marginBottom="16dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/game_commands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Quarter"
+            android:onClick="quarter"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="New Game"
+            android:onClick="newGame"/>
+    </LinearLayout>
+
+</RelativeLayout>
